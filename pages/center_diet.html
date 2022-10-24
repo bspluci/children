@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <title>지역아동센터</title>
+
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/jumbotron-narrow.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top main_header">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#navbar"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../pages/center_index.html" class="navbar-brand">
+        <img src="../images/symbol_logo.png" alt="심볼로고" class="hd_logo" />
+      </a>
+      <p class="hd_logo_text">
+        <a href="../pages/center_index.html">목포꿈노리지역아동센터</a>
+      </p>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navbar-list">
+          <a class="nav-link" href="javascript:void(0);">소개</a>
+        </li>
+        <li class="navbar-list dropdown">
+          <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            >학습하기<i class="bi bi-chevron-down"></i
+          ></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/center_basic.html">기초학력진단</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/center_learning.html">학습자료</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar-list">
+          <a class="nav-link" href="../pages/center_program.html">프로그램</a>
+        </li>
+        <li class="navbar-list nav-item dropdown" role="presentation">
+          <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            >우리소식<i class="bi bi-chevron-down"></i
+          ></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li>
+              <a class="dropdown-item" href="../pages/center_home.html">가성 통신문</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/center_diet.html">오늘의 식단</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar-list dropdown">
+          <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            >후원/공시<i class="bi bi-chevron-down"></i
+          ></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/center_support.html">후원하기</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/center_manage.html">경영 공시</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- 로그인 전 -->
+        <!-- <li class="navbar-list">
+          <a class="nav-link" href="../pages/center_login.html">로그인</a>
+        </li> -->
+
+        <!-- 로그인 후 -->
+        <li class="navbar-list nav-item dropdown" role="presentation">
+          <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            ><i class="bi bi-person-circle"></i
+          ></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="showPopup('popup_my_edit')">정보수정</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="javascript:void(0);">LOGOUT</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- 정보수정 팝업 : start -->
+    <div class="popup popup_my_edit">
+      <div class="dim"></div>
+      <div class="popup_area text-left">
+        <div class="popup_close" onclick="closePopup('popup_my_edit')">
+          <i class="bi bi-x-lg"></i>
+        </div>
+        <h3 class="popup_title">정보수정</h3>
+        <form action="" method="" class="form_my_reg">
+          <div class="form-wrap">
+            <div class="form-group flex_wrap just_between">
+              <label for="mb_id" class="form-label require">아이디</label>
+              <input type="text" name="mb_id" class="form-control readonly" readonly value="dkssudgktpdy1222" />
+            </div>
+            <div class="form-group flex_wrap just_between">
+              <label for="mb_name" class="form-label require">이름</label>
+              <input type="text" name="mb_name" class="form-control" required="" />
+            </div>
+            <div class="form-group flex_wrap just_between">
+              <label for="mb_pw_old" class="form-label">현재 비밀번호</label>
+              <input type="password" id="mb_pw_old" name="mb_pw_old" class="form-control" required="" />
+            </div>
+            <div class="form-group flex_wrap just_between">
+              <label for="mb_pw" class="form-label">비밀번호</label>
+              <input type="password" id="mb_pw" name="mb_pw" class="form-control" required="" />
+            </div>
+            <div class="form-group flex_wrap just_between">
+              <label for="mb_pw_re" class="form-label">비밀번호 확인</label>
+              <input type="password" id="mb_pw_re" name="mb_pw_re" class="form-control" required="" />
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="form_register_btn btn btn-xm btn-default">수정</button>
+            <a
+              href="javascript:void(0)"
+              class="form_register_btn btn btn-xm btn-default"
+              onclick="closePopup('popup_my_edit')"
+              >취소</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 정보수정 팝업 : end -->
+  </div>
+  <script>
+    $(function () {
+      var winHref = location.href;
+
+      $(".nav_list").each(function () {
+        var href = $(this).find("a").attr("href").split("/");
+        href = href[href.length - 1].split(".")[0];
+        href = winHref.indexOf(href);
+        if (href > 0) $(this).addClass("active");
+      });
+    });
+  </script>
+</nav>
+
+    <div class="sub_banner basic">
+      <div class="container"></div>
+    </div>
+    <div class="container support">
+      <section class="section">
+        <div class="row marketing">
+          <div class="marketing_head">
+            <h3 class="marketing_title">오늘의 식단</h3>
+            <p class="marketing_exp">아이에게 필요한 영양소가 가득한 오늘의 식단을 안내드립니다.</p>
+          </div>
+        </div>
+
+        <div class="row marketing">
+          <div class="text-right mb-1">
+            <a href="../pages/center_diet_write.html" class="form_login_btn btn btn-lg btn-default">글쓰기</a>
+          </div>
+          <div class="table_wrap table_common learning_need">
+            <table class="tbl_list">
+              <caption></caption>
+              <colgroup>
+                <col class="" style="width: 10%" />
+                <col class="" style="width: auto" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 15%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">작성자</th>
+                  <th scope="col">파일</th>
+                  <th scope="col">게시일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3</td>
+                  <td class="text-left"><a href="../pages/center_diet_view.html">2022년 8월 17일 식단입니다. </a></td>
+                  <td>피카추</td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-arrow-down"></i>
+                    </a>
+                  </td>
+                  <td>2022.05.11</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="text-left"><a href="../pages/center_diet_view.html">2022년 8월 16일 식단입니다. </a></td>
+                  <td>피카추</td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-arrow-down"></i>
+                    </a>
+                  </td>
+                  <td>2022.04.01</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="text-left"><a href="../pages/center_diet_view.html">2022년 8월 15일 식단입니다. </a></td>
+                  <td>피카추</td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-arrow-down"></i>
+                    </a>
+                  </td>
+                  <td>2022.03.11</td>
+                </tr>
+                <tr>
+                  <td colspan="5" class="nodata">조회된 내용이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="popup_paging">
+            <div class="popup_paging_wrap">
+              <a href="javascript:void(0);" class="arrow">
+                <i class="bi bi-chevron-double-left"></i>
+              </a>
+              <a href="javascript:void(0);" class="arrow">
+                <i class="bi bi-chevron-left"></i>
+              </a>
+              <a href="javascript:void(0);" class="num">1</a>
+              <a href="javascript:void(0);" class="num">2</a>
+              <a href="javascript:void(0);" class="num">3</a>
+              <a href="javascript:void(0);" class="num">4</a>
+              <a href="javascript:void(0);" class="num">5</a>
+              <a href="javascript:void(0);" class="num">6</a>
+              <a href="javascript:void(0);" class="num">7</a>
+              <a href="javascript:void(0);" class="num">8</a>
+              <a href="javascript:void(0);" class="num">9</a>
+              <a href="javascript:void(0);" class="arrow">
+                <i class="bi bi-chevron-right"></i>
+              </a>
+              <a href="javascript:void(0);" class="arrow">
+                <i class="bi bi-chevron-double-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+  <div class="section flex_wrap align_center just_between">
+    <h3>목포꿈노리지역아동센터</h3>
+    <div class="container">
+      <p class="ft_copy">단체명 : 목포꿈노리지역아동센터<span class="wall">|</span></p>
+      <p class="ft_copy">주소 : 인천광역시 계양구 경명대로 1029번지 22-12<span class="wall none">|</span></p>
+      <p class="ft_copy">대표전화 : 032 –224- 1318<span class="wall">|</span></p>
+      <p class="ft_copy">대표자 : 홍길동<span class="wall">|</span></p>
+      <p class="ft_copy">사업자등록번호 : 000-00-00000<span class="wall none">|</span></p>
+      <p class="ft_copy">개인정보관리책임자 : 홍길동<span class="wall none">|</span></p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
