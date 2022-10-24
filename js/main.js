@@ -18,7 +18,6 @@ $(function () {
 
   // 첨부파일명 생성
   $("#bd_file").on("change", function () {
-    console.log($("#bd_file"));
     var fileName = $("#bd_file")[0].files[0].name;
     $(".upload-name").val(fileName);
   });
