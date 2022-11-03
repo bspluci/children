@@ -1,0 +1,32 @@
+@font-face {
+font-family: 'notosans';
+font-style: normal;
+font-weight: 200;
+src: url(../fonts/notosans/NotoSansJP-Light.woff2) format('woff2'),
+    url(../fonts/notosans/NotoSansJP-Light.woff) format('woff'),
+    url(../fonts/notosans/NotoSansJP-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/notosans/NotoSansJP-Regular.woff2) format('woff2'),
+    url(../fonts/notosans/NotoSansJP-Regular.woff) format('woff'),
+    url(../fonts/notosans/NotoSansJP-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/notosans/NotoSansJP-Medium.woff2) format('woff2'),
+    url(../fonts/notosans/NotoSansJP-Medium.woff) format('woff'),
+    url(../fonts/notosans/NotoSansJP-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/notosans/NotoSansJP-Bold.woff2) format('woff2'),
+    url(../fonts/notosans/NotoSansJP-Bold.woff) format('woff'),
+    url(../fonts/notosans/NotoSansJP-Bold.otf) format('opentype');
+}

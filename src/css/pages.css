@@ -1,0 +1,36 @@
+::-webkit-input-placeholder {
+  color: gray;
+}
+
+::-moz-placeholder {
+  color: gray;
+}
+
+:-ms-input-placeholder {
+  color: gray;
+}
+
+::-ms-input-placeholder {
+  color: gray;
+}
+
+::placeholder {
+  color: gray;
+}
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 10rem;
+}
+
+.a {
+  display: inline;
+}
+.a div {
+  display: block;
+}
+
+.b {
+  border: solid 1px #ff0000;
+}

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('../include/center_head.html')
+  <body>
+    @@include('../include/center_header.html')
+    <div class="main_hero">
+      <div class="container marketing flex_wrap aling_center just_between">
+        <div class="main_profile">
+          <div class="main_profile_img">
+            <img src="../images/profile.png" alt="회원 프로필 이미지" />
+          </div>
+          <p class="main_profile_grade">교사</p>
+          <p class="main_profile_name">홍길동</p>
+          <a
+            href="javascript:void(0);"
+            class="profile_edit_btn btn btn-sm btn-default"
+            onclick="showPopup('popup_my_edit')"
+            >정보수정</a
+          >
+        </div>
+        <div class="main_banner_con">
+          <ul class="banner_center_warp">
+            <li class="banner_center_list">
+              <h4 class="banner_center_name bg_red">우리 센터 방문 현황</h4>
+              <div class="banner_center_content">
+                <div class="banner_center_count">
+                  <p class="banner_center_countnum">4,762</p>
+                  <p class="banner_center_counttext"><i class="bi bi-people-fill"></i>누적방문자수</p>
+                </div>
+                <ul class="banner_center_history">
+                  <li class="banner_center_historylist">
+                    <p class="history_count">70</p>
+                    <p class="history_text">지난달</p>
+                  </li>
+                  <li class="banner_center_historylist">
+                    <p class="history_count">3</p>
+                    <p class="history_text">지난주</p>
+                  </li>
+                  <li class="banner_center_historylist">
+                    <p class="history_count">1</p>
+                    <p class="history_text">오늘</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="banner_center_list">
+              <h4 class="banner_center_name bg_yellow">우리 센터 학습 현황</h4>
+              <div class="banner_center_content">
+                <ul class="banner_center_learn">
+                  <li class="banner_center_learnlist">
+                    <p class="learn_count">5.3회</p>
+                    <p class="learn_text">기초학력진단 인당 평균 시행 횟수</p>
+                  </li>
+                  <li class="banner_center_learnlist">
+                    <p class="learn_count">3.5회</p>
+                    <p class="learn_text">학습자료 인당 평균 다운로드 횟수</p>
+                  </li>
+                  <li class="banner_center_learnlist">
+                    <p class="learn_count">10.5회</p>
+                    <p class="learn_text">프로그램 인당 평균 학습 횟수</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="banner_center_list">
+              <h4 class="banner_center_name bg_green">우리 센터 회원 현황</h4>
+              <div class="banner_center_content">
+                <div class="banner_center_count">
+                  <p class="banner_center_countnum">61</p>
+                  <p class="banner_center_counttext"><i class="bi bi-people-fill"></i>전체 회원수</p>
+                </div>
+                <div class="banner_center_btnwrap">
+                  <a href="../pages/center_member.html" class="member_manage_btn btn btn-lg btn-default">회원 관리</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section class="section">
+        @@include('../include/section_top.html')
+
+        <div class="row marketing">
+          <h3 class="marketing_title">기초학력진단별 현황</h3>
+          <div class="select_wrap text-right">
+            <form action="">
+              <div class="selectbox">
+                <label for="">학교급</label>
+                <select name="" id="">
+                  <option value="">학교급</option>
+                  <option value="">초등학교</option>
+                  <option value="">중학교</option>
+                  <option value="">고등학교</option>
+                </select>
+              </div>
+              <div class="selectbox">
+                <label for="">학년</label>
+                <select name="" id="">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                </select>
+              </div>
+              <div class="selectbox">
+                <label for="">교과</label>
+                <select name="" id="">
+                  <option value="">수학</option>
+                  <option value="">영어</option>
+                  <option value="">국어</option>
+                  <option value="">미술</option>
+                </select>
+              </div>
+            </form>
+          </div>
+
+          <div class="table_wrap table_common learn_education">
+            <table class="tbl_list">
+              <caption></caption>
+              <colgroup>
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: auto" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">학교급</th>
+                  <th scope="col">학년</th>
+                  <th scope="col">교과</th>
+                  <th scope="col">진단명</th>
+                  <th scope="col">문항수</th>
+                  <th scope="col">응시수</th>
+                  <th scope="col">진단결과</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>
+                    <a href="javascript:void(0);" onclick="showPopup('popup_learn_education')"
+                      >초등 3학년수학 기초학습진단</a
+                    >
+                  </td>
+                  <td>25</td>
+                  <td>10</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green">결과보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>
+                    <a href="javascript:void(0);" onclick="showPopup('popup_learn_education')"
+                      >초등 3학년수학 기초학습진단</a
+                    >
+                  </td>
+                  <td>25</td>
+                  <td>10</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green">결과보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>
+                    <a href="javascript:void(0);" onclick="showPopup('popup_learn_education')"
+                      >초등 3학년수학 기초학습진단</a
+                    >
+                  </td>
+                  <td>25</td>
+                  <td>10</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green">결과보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>
+                    <a href="javascript:void(0);" onclick="showPopup('popup_learn_education')"
+                      >초등 3학년수학 기초학습진단</a
+                    >
+                  </td>
+                  <td>25</td>
+                  <td>10</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green">결과보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="7" class="nodata">조회된 항목이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="popup popup_learn_education">
+            <div class="dim"></div>
+            <div class="popup_area">
+              <div class="popup_close" onclick="closePopup('popup_learn_education')">
+                <i class="bi bi-x-lg"></i>
+              </div>
+              <h3 class="popup_title">기초학력진단별 현황 보기</h3>
+              <p class="popup_member">초등학교 | 3학년 | 수학</p>
+              <p class="popup_name">초등 3학년수학 기초학습진단</p>
+              <div class="table_wrap table_common">
+                <table class="tbl_list">
+                  <caption></caption>
+                  <colgroup>
+                    <col class="" style="width: 150px" />
+                    <col class="" style="width: 150px" />
+                    <col class="" style="width: 150px" />
+                    <col class="" style="width: 150px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">응시자</th>
+                      <th scope="col">최근 응시일</th>
+                      <th scope="col">최근 응시 점수</th>
+                      <th scope="col">진단 이력</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>90</td>
+                      <td>
+                        <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_record')"
+                          >보기</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>90</td>
+                      <td>
+                        <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_record')"
+                          >보기</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>90</td>
+                      <td>
+                        <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_record')"
+                          >보기</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="popup_paging">
+                <div class="popup_paging_wrap">
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-double-left"></i>
+                  </a>
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-left"></i>
+                  </a>
+                  <a href="" class="num">1</a>
+                  <a href="" class="num">2</a>
+                  <a href="" class="num">3</a>
+                  <a href="" class="num">4</a>
+                  <a href="" class="num">5</a>
+                  <a href="" class="num">6</a>
+                  <a href="" class="num">7</a>
+                  <a href="" class="num">8</a>
+                  <a href="" class="num">9</a>
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-double-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup popup_learn_record">
+            <div class="dim"></div>
+            <div class="popup_area">
+              <div class="popup_close" onclick="closePopup('popup_learn_record')">
+                <i class="bi bi-x-lg"></i>
+              </div>
+              <h3 class="popup_title">진단이력</h3>
+              <p class="popup_member">초등학교 | 3학년 | 수학</p>
+              <p class="popup_name">홍길동의 초등 3학년 수학 기초학습진단 이력</p>
+              <div class="popup_graph">그래프를 넣어주세요.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row marketing">
+          <h3 class="marketing_title">학습자료별 학습 현황</h3>
+          <div class="select_wrap text-right">
+            <form action="">
+              <div class="selectbox">
+                <label for="">학교급</label>
+                <select name="" id="">
+                  <option value="">학교급</option>
+                  <option value="">초등학교</option>
+                  <option value="">중학교</option>
+                  <option value="">고등학교</option>
+                </select>
+              </div>
+              <div class="selectbox">
+                <label for="">학년</label>
+                <select name="" id="">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                </select>
+              </div>
+              <div class="selectbox">
+                <label for="">교과</label>
+                <select name="" id="">
+                  <option value="">수학</option>
+                  <option value="">영어</option>
+                  <option value="">국어</option>
+                  <option value="">미술</option>
+                </select>
+              </div>
+            </form>
+          </div>
+
+          <div class="table_wrap table_common learn_study">
+            <table class="tbl_list">
+              <caption></caption>
+              <colgroup>
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: auto" />
+                <col class="" style="width: 13%" />
+                <col class="" style="width: 10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">학교급</th>
+                  <th scope="col">학년</th>
+                  <th scope="col">교과</th>
+                  <th scope="col">자료명</th>
+                  <th scope="col">다운로드 수</th>
+                  <th scope="col">파일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>수학 1주차</td>
+                  <td>12</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_study')">보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>수학 1주차</td>
+                  <td>12</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_study')">보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>수학 1주차</td>
+                  <td>12</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_study')">보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="nodata">조회된 내용이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="popup popup_learn_study">
+            <div class="dim"></div>
+            <div class="popup_area">
+              <div class="popup_close" onclick="closePopup('popup_learn_study')">
+                <i class="bi bi-x-lg"></i>
+              </div>
+              <h3 class="popup_title">학습자료별 학습현황 보기</h3>
+              <p class="popup_member">초등학교 | 3학년 | 수학</p>
+              <p class="popup_name">3학년 수학 3주차 학습자료</p>
+              <div class="table_wrap table_common">
+                <table class="tbl_list">
+                  <caption></caption>
+                  <colgroup>
+                    <col class="" style="width: 200px" />
+                    <col class="" style="width: 200px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">학습자</th>
+                      <th scope="col">최근 다운로드 일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                    </tr>
+                    <tr>
+                      <td>김장리</td>
+                      <td>2022-01-22</td>
+                    </tr>
+                    <tr>
+                      <td>박유채</td>
+                      <td>2022-01-22</td>
+                    </tr>
+                    <tr>
+                      <td>이순신</td>
+                      <td>2022-01-22</td>
+                    </tr>
+                    <tr>
+                      <td>김유신</td>
+                      <td>2022-01-22</td>
+                    </tr>
+                    <tr>
+                      <td>임꺽정</td>
+                      <td>학습전</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="popup_paging">
+                <div class="popup_paging_wrap">
+                  <span class="arrow">
+                    <i class="bi bi-chevron-double-left"></i>
+                  </span>
+                  <span class="arrow">
+                    <i class="bi bi-chevron-left"></i>
+                  </span>
+                  <span class="num">1</span>
+                  <span class="num">2</span>
+                  <span class="num">3</span>
+                  <span class="num">4</span>
+                  <span class="num">5</span>
+                  <span class="num">6</span>
+                  <span class="num">7</span>
+                  <span class="num">8</span>
+                  <span class="num">9</span>
+                  <span class="arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </span>
+                  <span class="arrow">
+                    <i class="bi bi-chevron-double-right"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row marketing">
+          <h3 class="marketing_title">프로그램별 학습 현황</h3>
+          <div class="table_wrap table_common learn_program">
+            <table class="tbl_list">
+              <caption></caption>
+              <colgroup>
+                <col class="" style="width: auto" />
+                <col class="" style="width: 15%" />
+                <col class="" style="width: 15%" />
+                <col class="" style="width: 20%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">{프로그램명}</th>
+                  <th scope="col">제작사</th>
+                  <th scope="col">회차수</th>
+                  <th scope="col">학습현황</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>나를 알아가는 여행</td>
+                  <td>제원</td>
+                  <td>5</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_program')"
+                      >회차별 학습현황 보기</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>나에게 맞는 진로</td>
+                  <td>제원</td>
+                  <td>5</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_program')"
+                      >회차별 학습현황 보기</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>AI 교육</td>
+                  <td>유비온</td>
+                  <td>5</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_program')"
+                      >회차별 학습현황 보기</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>코딩 교육</td>
+                  <td>유비온</td>
+                  <td>5</td>
+                  <td>
+                    <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_program')"
+                      >회차별 학습현황 보기</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="nodata">조회된 내용이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="popup popup_learn_program">
+            <div class="dim"></div>
+            <div class="popup_area">
+              <div class="popup_close" onclick="closePopup('popup_learn_program')">
+                <i class="bi bi-x-lg"></i>
+              </div>
+              <h3 class="popup_title">프로그램 학습현황 보기</h3>
+              <p class="popup_name">1회차 나는 누구일까?</p>
+              <div class="table_wrap table_common">
+                <table class="tbl_list">
+                  <caption></caption>
+                  <colgroup>
+                    <col class="" style="width: 100px" />
+                    <col class="" style="width: 200px" />
+                    <col class="" style="width: 200px" />
+                    <col class="" style="width: 100px" />
+                    <col class="" style="width: 100px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">학습자</th>
+                      <th scope="col">최초 수강일</th>
+                      <th scope="col">최근 수강일</th>
+                      <th scope="col">학습 횟수</th>
+                      <th scope="col">학습 상태</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>2022-01-22</td>
+                      <td>3</td>
+                      <td class="col_red">완료</td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>2022-01-22</td>
+                      <td>3</td>
+                      <td class="col_red">완료</td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>2022-01-22</td>
+                      <td>3</td>
+                      <td class="col_blue">50%</td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>2022-01-22</td>
+                      <td>3</td>
+                      <td class="col_red">완료</td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>2022-01-22</td>
+                      <td>3</td>
+                      <td class="">수강전</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="popup_paging">
+                <div class="popup_paging_wrap">
+                  <span class="arrow">
+                    <i class="bi bi-chevron-double-left"></i>
+                  </span>
+                  <span class="arrow">
+                    <i class="bi bi-chevron-left"></i>
+                  </span>
+                  <span class="num">1</span>
+                  <span class="num">2</span>
+                  <span class="num">3</span>
+                  <span class="num">4</span>
+                  <span class="num">5</span>
+                  <span class="num">6</span>
+                  <span class="num">7</span>
+                  <span class="num">8</span>
+                  <span class="num">9</span>
+                  <span class="arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </span>
+                  <span class="arrow">
+                    <i class="bi bi-chevron-double-right"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        @@include('../include/section_bottom.html')
+      </section>
+    </div>
+    @@include('../include/center_footer.html')
+  </body>
+</html>

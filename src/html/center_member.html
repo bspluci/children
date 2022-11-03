@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('../include/center_head.html')
+  <body>
+    @@include('../include/center_header.html')
+    <div class="sub_banner basic">
+      <div class="container"></div>
+    </div>
+    <div class="container">
+      <section class="section">
+        <div class="row marketing">
+          <h3 class="marketing_title">회원관리 <span class="member_count">총 5명</span></h3>
+          <div class="table_wrap table_common member_wrap">
+            <div class="member_top_btn">
+              <button class="delete_check form_register_btn btn btn-xm btn-default between">선택삭제</button>
+              <button class="form_register_btn btn btn-xm btn-default" onclick="showPopup('member_register')">
+                등록하기
+              </button>
+            </div>
+            <table class="tbl_list">
+              <caption></caption>
+              <colgroup>
+                <col class="" style="width: 5%" />
+                <col class="" style="width: 5%" />
+                <col class="" style="width: 8%" />
+                <col class="" style="width: 5%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 10%" />
+                <col class="" style="width: 13%" />
+                <col class="" style="width: 13%" />
+                <col class="" style="width: auto" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <input type="checkbox" name="check_all" id="check_all" />
+                  </th>
+                  <th scope="col">구분</th>
+                  <th scope="col">학교급</th>
+                  <th scope="col">학년</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">회원가입일</th>
+                  <th scope="col">정보수정일</th>
+                  <th scope="col">관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check01" id="check01" class="check_member" />
+                  </td>
+                  <td>학생</td>
+                  <td>초등학교</td>
+                  <td>3</td>
+                  <td>adgdg</td>
+                  <td>홍길동</td>
+                  <td>2020-01-01</td>
+                  <td>-</td>
+                  <td>
+                    <div class="member_btn_config">
+                      <button class="col_green" onclick="showPopup('member_edit')">수정</button>
+                      <span>|</span>
+                      <button class="col_red">삭제</button>
+                      <span>|</span>
+                      <button class="col_blue">비밀번호 초기화</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check02" id="check02" class="check_member" />
+                  </td>
+                  <td>학생</td>
+                  <td>초등학교</td>
+                  <td>3</td>
+                  <td>asdf</td>
+                  <td>수학 2주차</td>
+                  <td>2020-01-01</td>
+                  <td>2022-01-22</td>
+                  <td>
+                    <div class="member_btn_config">
+                      <button class="col_green" onclick="showPopup('member_edit')">수정</button>
+                      <span>|</span>
+                      <button class="col_red">삭제</button>
+                      <span>|</span>
+                      <button class="col_blue">비밀번호 초기화</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check03" id="check03" class="check_member" />
+                  </td>
+                  <td>학생</td>
+                  <td>초등학교</td>
+                  <td>3</td>
+                  <td>fdsa</td>
+                  <td>수학 마스터</td>
+                  <td>2020-01-05</td>
+                  <td>-</td>
+                  <td>
+                    <div class="member_btn_config">
+                      <button class="col_green" onclick="showPopup('member_edit')">수정</button>
+                      <span>|</span>
+                      <button class="col_red">삭제</button>
+                      <span>|</span>
+                      <button class="col_blue">비밀번호 초기화</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check04" id="check04" class="check_member" />
+                  </td>
+                  <td>학생</td>
+                  <td>초등학교</td>
+                  <td>3</td>
+                  <td>zxcv</td>
+                  <td>수학 주니어</td>
+                  <td>2020-01-01</td>
+                  <td>2022-02-02</td>
+                  <td>
+                    <div class="member_btn_config">
+                      <button class="col_green" onclick="showPopup('member_edit')">수정</button>
+                      <span>|</span>
+                      <button class="col_red">삭제</button>
+                      <span>|</span>
+                      <button class="col_blue">비밀번호 초기화</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check05" id="check05" class="check_member" />
+                  </td>
+                  <td>학생</td>
+                  <td>초등학교</td>
+                  <td>6</td>
+                  <td>vcxz</td>
+                  <td>수학 1주차</td>
+                  <td>2020-01-01</td>
+                  <td>2021-06-19</td>
+                  <td>
+                    <div class="member_btn_config">
+                      <button class="col_green" onclick="showPopup('member_edit')">수정</button>
+                      <span>|</span>
+                      <button class="col_red">삭제</button>
+                      <span>|</span>
+                      <button class="col_blue">비밀번호 초기화</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="9" class="nodata">조회된 항목이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 회원등록 start -->
+          <div class="popup member_register">
+            <div class="dim"></div>
+            <div class="popup_area member">
+              <div class="popup_close" onclick="closePopup('member_register')">
+                <i class="bi bi-x-lg"></i>
+              </div>
+              <div class="register_content">
+                <h3 class="register_name">회원 등록 하기</h3>
+                <form action="" method="" class="form_login">
+                  <div class="form-wrap">
+                    <div class="form-group">
+                      <label for="mb_divi" class="form-label require">아이디</label>
+                      <select name="mb_divi" id="mb_divi" class="form-control" required>
+                        <option value="">학생</option>
+                        <option value="">교사</option>
+                        <option value="">학부모</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="school_level" class="form-label require">학교급/학년</label>
+                      <div class="input-group flex_wrap">
+                        <select name="school_level" id="" class="form-control" required>
+                          <option value="">학교급</option>
+                          <option value="">초등학교</option>
+                          <option value="">중학교</option>
+                          <option value="">고등학교</option>
+                        </select>
+                        <select name="school_grade" id="" class="form-control" required>
+                          <option value="">학년</option>
+                          <option value="">1학년</option>
+                          <option value="">2학년</option>
+                          <option value="">3학년</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="mb_id" class="form-label require">아이디</label>
+                      <input type="text" name="mb_id" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="mb_name" class="form-label require">이름</label>
+                      <input type="text" name="mb_name" class="form-control" required />
+                    </div>
+                  </div>
+                  <p class="col_red">
+                    * 최초 비밀번호는 ‘0000’ 입니다.<br />
+                    * 학생 최초 로그인 시 비밀번호 변경이 필요합니다.
+                  </p>
+                  <div class="text-center">
+                    <button class="form_register_btn btn btn-xm btn-default">등록</button>
+                    <a
+                      href="javascript:void(0)"
+                      class="form_register_btn btn btn-xm btn-default"
+                      onclick="closePopup('member_register')"
+                      >취소</a
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- 회원등록 end -->
+
+          <!-- 회원정보수정 start -->
+          <div class="popup member_edit">
+            <div class="dim"></div>
+            <div class="popup_area member">
+              <div class="popup_close" onclick="closePopup('member_edit')">
+                <i class="bi bi-x-lg"></i>
+              </div>
+              <div class="register_content">
+                <h3 class="register_name">회원 정보 수정 하기</h3>
+                <form action="" method="" class="form_login">
+                  <div class="form-wrap">
+                    <div class="form-group">
+                      <label for="mb_divi" class="form-label require">아이디</label>
+                      <select name="mb_divi" id="mb_divi" class="form-control" required>
+                        <option value="">학생</option>
+                        <option value="">교사</option>
+                        <option value="">학부모</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="school_level" class="form-label require">학교급/학년</label>
+                      <div class="input-group flex_wrap">
+                        <select name="school_level" id="" class="form-control" required>
+                          <option value="">학교급</option>
+                          <option value="">초등학교</option>
+                          <option value="">중학교</option>
+                          <option value="">고등학교</option>
+                        </select>
+                        <select name="school_grade" id="" class="form-control" required>
+                          <option value="">학년</option>
+                          <option value="">1학년</option>
+                          <option value="">2학년</option>
+                          <option value="">3학년</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="mb_id" class="form-label">아이디</label>
+                      <p>asdfasdf</p>
+                    </div>
+                    <div class="form-group">
+                      <label for="mb_name" class="form-label require">이름</label>
+                      <input type="text" name="mb_name" class="form-control" required />
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button class="form_register_btn btn btn-xm btn-default">수정</button>
+                    <a
+                      href="javascript:void(0)"
+                      class="form_register_btn btn btn-xm btn-default"
+                      onclick="closePopup('member_edit')"
+                      >취소</a
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- 회원정보수정 end -->
+        </div>
+      </section>
+    </div>
+    <script>
+      $("#check_all").click(function () {
+        if ($(this).is(":checked")) {
+          $(".check_member").each(function () {
+            $(this).prop("checked", true);
+          });
+        } else {
+          $(".check_member").each(function () {
+            $(this).prop("checked", false);
+          });
+        }
+      });
+
+      $(".check_member").click(function () {
+        if (!$(this).is(":checked")) {
+          $("#check_all").prop("checked", false);
+        }
+      });
+    </script>
+    @@include('../include/center_footer.html')
+  </body>
+</html>

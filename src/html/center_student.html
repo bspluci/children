@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('../include/center_head.html')
+  <body>
+    @@include('../include/center_header.html')
+    <div class="main_hero student_hero">
+      <div class="container">
+        <div class="marketing flex_wrap align_center just_between">
+          <div class="main_profile">
+            <div class="main_profile_img">
+              <img src="../images/profile.png" alt="회원 프로필 이미지" />
+            </div>
+            <p class="main_profile_grade">3학년</p>
+            <p class="main_profile_name">홍길동</p>
+            <a
+              href="javascript:void(0);"
+              class="profile_edit_btn btn btn-sm btn-default"
+              onclick="showPopup('popup_my_edit')"
+              >정보수정</a
+            >
+          </div>
+          <style>
+            .bi-pencil-square::before,
+            .bi-check2-square::before {
+              display: none;
+            }
+            .bi-pencil-square::after {
+              content: "\f4ca";
+            }
+            .bi-check2-square::after {
+              content: "\f271";
+            }
+            .bi::after,
+            [class^="bi-"]::after,
+            [class*=" bi-"]::after {
+              display: inline-block;
+              padding-left: 5px;
+              font-family: bootstrap-icons !important;
+              font-style: normal;
+              font-weight: normal !important;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+              vertical-align: -0.125em;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+          </style>
+          <div class="main_banner_con">
+            <form action="">
+              <div class="main_banner_wrap">
+                <button class="pointer bi bi-pencil-square" onclick="myEdit(event, 'dream')">나의 꿈</button>
+                <h2 class="edit_list edit_dream">"즐기며 행복하게 돈벌기"</h2>
+                <div class="input_dream hidden">
+                  <input class="" type="text" />
+                  <div class="my_input_button">
+                    <button class="profile_edit_btn btn btn-sm btn-default">수정</button>
+                    <button class="profile_edit_btn btn btn-sm btn-default" onclick="myEdit(event, 'dream')">
+                      취소
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="main_banner_wrap main_banner_wrap_plan">
+                <button class="pointer bi bi-pencil-square" onclick="myEdit(event, 'plan')">
+                  올해 나의 3가지 계획
+                </button>
+                <ul class="edit_plan">
+                  <li class="edit_list">일주일에 한권씩 책읽기</li>
+                  <li class="edit_list">주말에 등산하기</li>
+                  <li class="edit_list">10KG 빼기</li>
+                </ul>
+                <ul class="input_plan hidden">
+                  <li>
+                    <input class="" type="text" />
+                  </li>
+                  <li>
+                    <input class="" type="text" />
+                  </li>
+                  <li>
+                    <input class="" type="text" />
+                  </li>
+                  <div class="my_input_button">
+                    <button class="profile_edit_btn btn btn-sm btn-default">수정</button>
+                    <button class="profile_edit_btn btn btn-sm btn-default" onclick="myEdit(event, 'plan')">
+                      취소
+                    </button>
+                  </div>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myEdit(e, target) {
+        if (target) {
+          e.preventDefault();
+          edit = document.querySelector(".edit_" + target + "");
+          input = document.querySelector(".input_" + target + "");
+
+          if (edit.classList.contains("hidden")) {
+            edit.classList.remove("hidden");
+          } else {
+            edit.classList.add("hidden");
+          }
+
+          if (input.classList.contains("hidden")) {
+            input.classList.remove("hidden");
+          } else {
+            input.classList.add("hidden");
+          }
+        }
+      }
+    </script>
+    <div class="container">
+      <section class="section">
+        @@include('../include/section_top.html')
+
+        <div class="row marketing">
+          <h3 class="marketing_title">나의 기초학력진단</h3>
+          <div class="table_wrap table_common academic_ability">
+            <table class="tbl_list">
+              <caption></caption>
+              <colgroup>
+                <col class="date" style="width: 20%" />
+                <col class="name" style="width: auto" />
+                <col class="res" style="width: 20%" />
+                <col class="view" style="width: 20%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">최근 진단일</th>
+                  <th scope="col">진단명</th>
+                  <th scope="col">진단결과</th>
+                  <th scope="col">이력보기</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2022. 02. 02</td>
+                  <td>모르겠습니다</td>
+                  <td>모르겠습니다</td>
+                  <td>
+                    <a href="javascript:void(0);" onclick="showPopup('popup_learn_education')" class="col_green"
+                      >모르겠습니다</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="nodata">조회된 내용이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-3 text-center">
+            <a class="btn btn-lg btn-primary" href="../pages/center_basic.html">나의 기초학력 알아보기</a>
+          </div>
+          <div class="popup popup_learn_education">
+            <div class="dim"></div>
+            <div class="popup_area">
+              <div class="popup_close" onclick="closePopup('popup_learn_education')">
+                <i class="bi bi-x-lg"></i>
+              </div>
+              <h3 class="popup_title">기초학력진단별 현황 보기</h3>
+              <p class="popup_member">초등학교 | 3학년 | 수학</p>
+              <p class="popup_name">초등 3학년수학 기초학습진단</p>
+              <div class="table_wrap table_common">
+                <table class="tbl_list">
+                  <caption></caption>
+                  <colgroup>
+                    <col class="" style="width: 150px" />
+                    <col class="" style="width: 150px" />
+                    <col class="" style="width: 150px" />
+                    <col class="" style="width: 150px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">응시자</th>
+                      <th scope="col">최근 응시일</th>
+                      <th scope="col">최근 응시 점수</th>
+                      <th scope="col">진단 이력</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>90</td>
+                      <td>
+                        <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_record')"
+                          >보기</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>90</td>
+                      <td>
+                        <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_record')"
+                          >보기</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>홍길동</td>
+                      <td>2022-01-22</td>
+                      <td>90</td>
+                      <td>
+                        <a href="javascript:void(0);" class="col_green" onclick="showPopup('popup_learn_record')"
+                          >보기</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="popup_paging">
+                <div class="popup_paging_wrap">
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-double-left"></i>
+                  </a>
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-left"></i>
+                  </a>
+                  <a href="" class="num">1</a>
+                  <a href="" class="num">2</a>
+                  <a href="" class="num">3</a>
+                  <a href="" class="num">4</a>
+                  <a href="" class="num">5</a>
+                  <a href="" class="num">6</a>
+                  <a href="" class="num">7</a>
+                  <a href="" class="num">8</a>
+                  <a href="" class="num">9</a>
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                  <a href="" class="arrow">
+                    <i class="bi bi-chevron-double-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row marketing">
+          <h3 class="marketing_title">나에게 필요한 학습</h3>
+          <div class="table_wrap table_common learning_need">
+            <table class="tbl_list">
+              <caption></caption>
+              <colgroup>
+                <col class="date" style="width: 15%" />
+                <col class="name" style="width: 15%" />
+                <col class="res" style="width: 15%" />
+                <col class="view" style="width: auto" />
+                <col class="view" style="width: 10%" />
+                <col class="view" style="width: 10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">학교급</th>
+                  <th scope="col">학년</th>
+                  <th scope="col">교과</th>
+                  <th scope="col">자료명</th>
+                  <th scope="col">문제지</th>
+                  <th scope="col">답안지</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>수학 1주차</td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </a>
+                  </td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>수학 1주차</td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </a>
+                  </td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>초등학교</td>
+                  <td>3학년</td>
+                  <td>수학</td>
+                  <td>수학 1주차</td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </a>
+                  </td>
+                  <td class="file-download">
+                    <a href="javascript:void(0);">
+                      <i class="bi bi-file-earmark-text"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="nodata">조회된 내용이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row marketing">
+          <h3 class="marketing_title">내가 학습중인 프로그램</h3>
+          <div class="learning_program">
+            <ul class="len_program_wrap">
+              <li class="len_program_list">
+                <a href="javascript:void(0);">
+                  <p class="len_program_persent">학습중 20%</p>
+                  <div class="len_program_thumb">
+                    <img src="../images/boochu.jpeg" alt="학습중 프로그램 썸네일 이미지" />
+                  </div>
+                  <div class="len_program_text">
+                    <h4 class="len_program_name">{프로그램명}</h4>
+                    <p class="len_program_date">최근학습일 2022. 01. 22</p>
+                  </div>
+                </a>
+              </li>
+              <li class="len_program_list">
+                <a href="javascript:void(0);">
+                  <p class="len_program_persent">학습중 20%</p>
+                  <div class="len_program_thumb">
+                    <img src="../images/boochu.jpeg" alt="학습중 프로그램 썸네일 이미지" />
+                  </div>
+                  <div class="len_program_text">
+                    <h4 class="len_program_name">{프로그램명}</h4>
+                    <p class="len_program_date">최근학습일 2022. 01. 22</p>
+                  </div>
+                </a>
+              </li>
+              <li class="len_program_list">
+                <a href="javascript:void(0);">
+                  <p class="len_program_persent">학습중 20%</p>
+                  <div class="len_program_thumb">
+                    <img src="../images/boochu.jpeg" alt="학습중 프로그램 썸네일 이미지" />
+                  </div>
+                  <div class="len_program_text">
+                    <h4 class="len_program_name">{프로그램명}</h4>
+                    <p class="len_program_date">최근학습일 2022. 01. 22</p>
+                  </div>
+                </a>
+              </li>
+              <li class="len_program_list">
+                <a href="javascript:void(0);">
+                  <p class="len_program_persent">학습중 20%</p>
+                  <div class="len_program_thumb">
+                    <img src="../images/boochu.jpeg" alt="학습중 프로그램 썸네일 이미지" />
+                  </div>
+                  <div class="len_program_text">
+                    <h4 class="len_program_name">{프로그램명}</h4>
+                    <p class="len_program_date">최근학습일 2022. 01. 22</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        @@include('../include/section_bottom.html')
+      </section>
+    </div>
+    <script></script>
+    @@include('../include/center_footer.html')
+  </body>
+</html>

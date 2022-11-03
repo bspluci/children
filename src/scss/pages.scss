@@ -1,0 +1,13 @@
+@import './common/mixin';
+@import './pages/contact';
+
+
+.a{
+    display: inline;
+    div{
+        display: block;
+    }
+}
+.b{
+    border: solid 1px #ff0000;
+}

@@ -1,0 +1,87 @@
+<nav class="navbar navbar-default navbar-fixed-top main_header">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#navbar"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../pages/index.html" class="navbar-brand">
+        <img src="../images/symbol_logo.png" alt="심볼로고" class="hd_logo" />
+      </a>
+      <p class="hd_logo_text">
+        <a href="../pages/index.html">아동돌봄네트워크<br />사회적협동조합연합회</a>
+      </p>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navbar-list">
+          <a class="nav-link" href="../pages/about.html">소개</a>
+        </li>
+        <li class="navbar-list dropdown">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+          >
+            주요 사업<i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/ecosystem.html">선 순환형 회원 자립 생태계 구축</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/network.html">회원 간 네트워크 구축</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/welfare.html">회원사 아동복지 서비스 질적 향상</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="../pages/privilege.html">회원 권익 증진</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar-list">
+          <a class="nav-link" href="../pages/support.html">후원 안내</a>
+        </li>
+        <li class="navbar-list">
+          <a class="nav-link" href="../pages/manage.html">투명경영(경영공시)</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  $(function () {
+    // url에따른 메뉴 활성화
+    var winHref = location.href;
+
+    $(".navbar-list").each(function () {
+      var href = $(this).find("a").attr("href").split("/");
+      href = href[href.length - 1].split(".")[0];
+      href = winHref.indexOf(href);
+      if (href > 0) $(this).addClass("active");
+
+      if ($(this).find("ul.dropdown-menu").length > 0) {
+        $(this)
+          .find("ul.dropdown-menu > li")
+          .each(function () {
+            var href = $(this).find("a").attr("href").split("/");
+            href = href[href.length - 1].split(".")[0];
+            href = winHref.indexOf(href);
+            if (href > 0) $(this).closest(".navbar-list").addClass("active");
+          });
+      }
+    });
+  });
+</script>

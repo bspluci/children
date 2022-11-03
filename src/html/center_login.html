@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('../include/center_head.html')
+  <body>
+    @@include('../include/center_header.html')
+    <div class="container">
+      <section class="section">
+        <div class="login_wrap">
+          <div class="login_imgwrap">
+            <img src="../../images/noimage.gif" alt="로그인 이미지" />
+          </div>
+
+          <!-- 로그인 전 start -->
+          <div class="login_content">
+            <h4 class="login_name">목포꿈노리지역아동센터</h4>
+            <form action="" method="" class="form_login">
+              <div class="form-wrap">
+                <div class="form-group">
+                  <label for="mb_id" class="hidden form-label">아이디</label>
+                  <input type="text" name="mb_id" class="form-control" placeholder="아이디" />
+                </div>
+                <div class="form-group">
+                  <label for="mb_pw" class="hidden form-label">비밀번호</label>
+                  <input type="password" name="mb_pw" class="form-control" placeholder="비밀번호" />
+                </div>
+              </div>
+              <button class="form_login_btn btn btn-lg btn-primary">로그인</button>
+            </form>
+          </div>
+          <!-- 로그인 전 end -->
+
+          <!-- 최초 로그인이라면 start -->
+          <!-- <div class="login_content">
+            <h4 class="login_name">새로운 비밀번호로 변경해주세요</h4>
+            <form action="" method="" class="form_login">
+              <div class="form-wrap">
+                <div class="form-group">
+                  <label for="mb_pw" class="hidden form-label">새 비밀번호</label>
+                  <input type="text" name="mb_pw" class="form-control" placeholder="새 비밀번호" />
+                </div>
+                <div class="form-group">
+                  <label for="mb_re_pw" class="hidden form-label">비밀번호 확인</label>
+                  <input type="password" name="mb_re_pw" class="form-control" placeholder="비밀번호 확인" />
+                </div>
+              </div>
+              <button class="form_login_btn btn btn-lg btn-primary">변경하기</button>
+            </form>
+          </div> -->
+          <!-- 최초 로그인이라면 경우 end -->
+        </div>
+      </section>
+    </div>
+    <script></script>
+    @@include('../include/center_footer.html')
+  </body>
+  <style>
+    body > .container {
+      display: table;
+      min-height: calc(100vh - 241px - 80px);
+    }
+    body > .container .section {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  </style>
+</html>
