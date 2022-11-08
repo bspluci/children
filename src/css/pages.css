@@ -134,9 +134,8 @@ h3.title {
   margin-bottom: 20px;
 }
 
-.bg_01 {
-  background: url(../images/bg_01.png) no-repeat right bottom;
-  background-size: 700px auto;
+::-ms-input-placeholder {
+  color: gray;
 }
 
 .bg_02 {
