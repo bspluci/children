@@ -161,12 +161,17 @@ h3.title {
 
 .bg_06 {
   background: url(../images/bg_06.png) no-repeat right bottom;
-  background-size: 700px auto;
+  background-size: 300px auto;
 }
 
 .bg_07 {
   background: url(../images/bg_07.png) no-repeat right bottom;
-  background-size: 700px auto;
+  background-size: 300px auto;
+}
+
+.bg_08 {
+  background: url(../images/bg_04.png) no-repeat right bottom;
+  background-size: 500px auto;
 }
 
 .img-bottom-padding {
@@ -175,6 +180,26 @@ h3.title {
 
 .welfare_img img {
   width: 70%;
+}
+
+.organ_main_top {
+  background: url(../images/main_back.jpg) no-repeat center 0;
+  background-size: cover;
+  padding-top: 130px !important;
+}
+.organ_main_top h2 {
+  font-family: "East Sea Dokdo", cursive;
+  text-align: center;
+  color: #000;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.85);
+  font-size: 80px;
+}
+.organ_main_top h2 span {
+  word-break: keep-all;
+}
+.organ_main_top .lead {
+  font-family: "Nanum Myeongjo", serif;
+  word-break: keep-all;
 }
 
 @media (max-width: 768px) {
