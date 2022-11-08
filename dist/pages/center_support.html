@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../css/bootstrap.css" />
   <link rel="stylesheet" href="../css/jumbotron-narrow.css" />
   <link rel="stylesheet" href="../css/index.css" />
-  <link rel="stylesheet" href="../css/pages.css" />
   <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -47,20 +46,9 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px">
       <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-list nav-item dropdown" role="presentation">
-          <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            >소개<i class="bi bi-chevron-down"></i
-          ></a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li>
-              <a class="dropdown-item" href="../pages/center_about.html">센터 소개</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="../pages/center_map.html">오시는 길</a>
-            </li>
-          </ul>
+        <li class="navbar-list">
+          <a class="nav-link" href="javascript:void(0);">소개</a>
         </li>
-
         <li class="navbar-list dropdown">
           <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             >학습하기<i class="bi bi-chevron-down"></i
@@ -74,11 +62,9 @@
             </li>
           </ul>
         </li>
-
         <li class="navbar-list">
           <a class="nav-link" href="../pages/center_program.html">프로그램</a>
         </li>
-
         <li class="navbar-list nav-item dropdown" role="presentation">
           <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             >우리소식<i class="bi bi-chevron-down"></i
@@ -92,7 +78,6 @@
             </li>
           </ul>
         </li>
-
         <li class="navbar-list dropdown">
           <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             >후원/공시<i class="bi bi-chevron-down"></i
@@ -107,8 +92,6 @@
           </ul>
         </li>
 
-        <!-- 로그인 전/후 -->
-
         <!-- 로그인 전 start -->
         <!-- <li class="navbar-list">
           <a class="nav-link" href="../pages/center_login.html">로그인</a>
@@ -122,7 +105,7 @@
           ></a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
             <li>
-              <a class="dropdown-item" href="javascript:void(0);" onclick="showPopup('popup_my')">정보수정</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="showPopup('popup_my_edit')">정보수정</a>
             </li>
             <li>
               <a class="dropdown-item" href="javascript:void(0);">LOGOUT</a>
@@ -131,17 +114,17 @@
         </li>
 
         <li class="navbar-list nav-item dropdown navbar-mo flex_wrap" role="presentation">
-          <a class="nav-link" href="javascript:void(0);" onclick="showPopup('popup_my')">정보수정</a>
+          <a class="nav-link" href="javascript:void(0);" onclick="showPopup('popup_my_edit')">정보수정</a>
           <a class="dropdown-item" href="javascript:void(0);">LOGOUT</a>
         </li>
         <!-- 로그인 후 end -->
       </ul>
     </div>
     <!-- 정보수정 팝업 : start -->
-    <div class="popup popup_my popup_edit">
+    <div class="popup popup_my_edit">
       <div class="dim"></div>
       <div class="popup_area text-left">
-        <div class="popup_close" onclick="closePopup('popup_my')">
+        <div class="popup_close" onclick="closePopup('popup_my_edit')">
           <i class="bi bi-x-lg"></i>
         </div>
         <h3 class="popup_title">정보수정</h3>
@@ -173,7 +156,7 @@
             <a
               href="javascript:void(0)"
               class="form_register_btn btn btn-xm btn-default"
-              onclick="closePopup('popup_my')"
+              onclick="closePopup('popup_my_edit')"
               >취소</a
             >
           </div>
@@ -227,22 +210,22 @@
             <h3 class="title mb-3">후원 종류</h3>
             <ul class="support_wrap">
               <li class="support_list text-medium">
-                정기 후원 - 매월 일정한 금액을 후원하는 방법으로, 후원금은 아동돌봄에 필요한 아동에게 사용됩니다.
+                ● 정기 후원 - 매월 일정한 금액을 후원하는 방법으로, 후원금은 아동돌봄에 필요한 아동에게 사용됩니다.
               </li>
               <li class="support_list text-medium">
-                일시 후원 - 일시후원은 한시적으로 후원하는 방법으로, 긴급한 돌봄이 필요한 아동에게 전달되어 도움을 줄
+                ● 일시 후원 - 일시후원은 한시적으로 후원하는 방법으로, 긴급한 돌봄이 필요한 아동에게 전달되어 도움을 줄
                 수 있습니다.
               </li>
               <li class="support_list text-medium">
-                맞춤 후원 - 후원자님께서 정해준 지역별 아동돌봄을 후원하며, 프로그램, 문화체험, 학습물품, 상담, 교육
+                ● 맞춤 후원 - 후원자님께서 정해준 지역별 아동돌봄을 후원하며, 프로그램, 문화체험, 학습물품, 상담, 교육
                 기자재 등을 후원할 수 있습니다.
               </li>
               <li class="support_list text-medium">
-                기업 후원 - 기업에서 아동돌봄 전반에 걸친 프로그램 및 운영과 관련하여 도움과 지원이 필요한 곳에 후원할
+                ● 기업 후원 - 기업에서 아동돌봄 전반에 걸친 프로그램 및 운영과 관련하여 도움과 지원이 필요한 곳에 후원할
                 수 있습니다.
               </li>
               <li class="support_list text-medium">
-                물품 후원 - 아동 돌봄에 필요한 다양한 물품을 후원 받고 잇습니다.
+                ● 물품 후원 - 아동 돌봄에 필요한 다양한 물품을 후원 받고 잇습니다.
               </li>
             </ul>
           </div>

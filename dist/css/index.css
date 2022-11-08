@@ -1,15 +1,11 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"); /* default */
-@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
-
 body,
 nav {
   min-width: 300px;
 }
 body {
   padding-top: 80px;
-  background: #efefef;
+  background: #f5f5f5;
 }
 table {
   background-color: #fff;
@@ -89,6 +85,109 @@ input {
 .flex_wrap.just_between {
   justify-content: space-between;
 }
+.mb-1 {
+  margin-bottom: 10px;
+}
+.mb-2 {
+  margin-bottom: 20px;
+}
+.mb-3 {
+  margin-bottom: 30px;
+}
+.mb-4 {
+  margin-bottom: 40px;
+}
+.mb-5 {
+  margin-bottom: 50px;
+}
+.mt-1 {
+  margin-top: 10px;
+}
+.mt-2 {
+  margin-top: 20px;
+}
+.mt-3 {
+  margin-top: 30px;
+}
+.mt-4 {
+  margin-top: 40px;
+}
+.mt-5 {
+  margin-top: 50px;
+}
+.btn {
+  outline: none !important;
+}
+.col_white {
+  color: #fff;
+}
+.col_green {
+  color: #4bbd73;
+}
+.col_green_dark {
+  color: #21610b;
+}
+.col_red {
+  color: #ff6e63;
+}
+.col_blue {
+  color: #6b7aff;
+}
+.w_30 {
+  width: 30%;
+}
+.w_40 {
+  width: 40%;
+}
+.w_50 {
+  width: 50%;
+}
+.w_60 {
+  width: 60%;
+}
+.w_70 {
+  width: 70%;
+}
+.w_100 {
+  width: 100%;
+}
+.float_left {
+  float: left;
+}
+.float_right {
+  float: right;
+}
+.float_left::after,
+.float_right::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.text-light {
+  font-size: 12px;
+}
+.text-normal {
+  font-size: 16px;
+}
+.text-medium {
+  font-size: 20px;
+}
+.text-large {
+  font-size: 24px;
+}
+.text-xlarge {
+  font-size: 36px;
+}
+.fw-bold {
+  font-weight: bold;
+}
+.fw-normal {
+  font-weight: normal;
+}
+
+.pointer {
+  cursor: pointer;
+}
 .container > .navbar-header {
   margin-left: 0;
 }
@@ -151,10 +250,6 @@ input {
 .jumbotron .lead_wrap .lead {
   margin-bottom: 20px;
 }
-.jumbo .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
 .bn_wrap {
   width: 100%;
   max-width: 400px;
@@ -174,7 +269,6 @@ input {
   font-weight: 500;
   margin: 20px 0 30px;
   text-align: center;
-  font-family: "Nanum Myeongjo", serif;
 }
 .marketing_title > span {
   font-size: 60px;
@@ -200,7 +294,7 @@ input {
   flex-wrap: wrap;
 }
 .indent p {
-  padding-left: 13px;
+  padding-left: 20px;
   text-indent: -12px;
 }
 .indent p.title {
@@ -495,7 +589,7 @@ input {
 .popup .popup_area.member {
   max-width: 400px;
 }
-.popup.popup_edit .popup_area {
+.popup.popup_my_edit .popup_area {
   max-width: 500px;
 }
 .popup .popup_title {
@@ -727,9 +821,9 @@ input {
 }
 .form-label.require::after {
   position: absolute;
-  top: 3px;
+  top: 50%;
   right: 0;
-  transform: translateX(150%);
+  transform: translate(150%, -50%);
   content: "*";
   color: red;
 }
@@ -913,7 +1007,6 @@ input {
 .student_hero .marketing h2 {
   font-size: 30px;
   margin-top: 0px;
-  font-family: "Nanum Myeongjo", serif;
 }
 .student_hero .main_banner_wrap_plan {
   padding: 15px 20px 10px;
@@ -1040,19 +1133,18 @@ input {
   box-shadow: none;
   font-size: 16px;
 }
-.popup_edit .flex_wrap > label {
+.popup_my_edit .flex_wrap > label {
   line-height: 34px;
   width: auto;
 }
-.popup_edit .form-wrap > .flex_wrap > .form-control,
-.popup_edit .form-wrap > .flex_wrap > .select-group,
-.popup_edit .form-wrap > .flex_wrap > .add-group {
+.popup_my_edit .form-wrap > .flex_wrap > .form-control,
+.popup_my_edit .form-wrap > .flex_wrap > .select-group {
   width: calc(100% - 120px);
 }
-.popup_edit .flex_wrap .select-group > select:first-child {
+.popup_my_edit .flex_wrap .select-group > select:first-child {
   margin-right: 10px;
 }
-.popup_edit .form-wrap {
+.popup_my_edit .form-wrap {
   margin-bottom: 30px;
 }
 
@@ -1346,12 +1438,11 @@ input {
   .form-control {
     padding: 6px;
   }
-  .popup_edit .flex_wrap > label {
+  .popup_my_edit .flex_wrap > label {
     font-size: 14px;
   }
-  .popup_edit .form-wrap > .flex_wrap > .form-control,
-  .popup_edit .form-wrap > .flex_wrap > .select-group,
-  .popup_edit .form-wrap > .flex_wrap > .add-group {
+  .popup_my_edit .form-wrap > .flex_wrap > .form-control,
+  .popup_my_edit .form-wrap > .flex_wrap > .select-group {
     width: calc(100% - 100px);
   }
   .popup .form-group .readonly {
@@ -1384,7 +1475,7 @@ input {
 /* 랜딩페이지 start */
 .service .sub_banner {
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin: 0 auto;
 }
 .service .sub_banner.children {
@@ -1409,9 +1500,7 @@ input {
   z-index: 9;
 }
 .service .sub_banner.children .banner_title {
-  font-family: "Gugi", cursive;
-  text-shadow: 2px 2px 2px #333;
-  font-size: 100px;
+  font-size: 56px;
 }
 
 .navbar {
@@ -1458,7 +1547,7 @@ input {
   padding: 70px 0;
 }
 .service .marketing {
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 .service .form-control {
@@ -1540,9 +1629,6 @@ input {
   margin: 0;
   font-size: 42px;
 }
-.h2-normal {
-  font-size: 42px;
-}
 .green_box .green_wrap > p {
   line-height: 42px;
 }
@@ -1586,11 +1672,10 @@ input {
   width: 31.6%;
   height: auto;
   margin-bottom: 30px;
-  padding: 20px 15px 15px;
+  padding: 20px 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 3px 3px 5px 2px #ddd;
-  background-color: rgba(255 255 255/0.9);
 }
 .service .eco_boxlist:last-child {
   margin-bottom: 0;
@@ -1602,7 +1687,7 @@ input {
   margin-bottom: 15px;
 }
 .service .network_wrap {
-  /* max-width: 800px; */
+  max-width: 800px;
   margin: 0 auto;
 }
 .service .network_list {
@@ -1771,8 +1856,8 @@ input {
   justify-content: center; */
   width: 20%;
   height: 60px;
-  border-right: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
   box-sizing: border-box;
   cursor: pointer;
   background: #fff;
@@ -1792,48 +1877,10 @@ input {
   background: #a2a2a2;
 }
 .number_board .numboard_list:nth-child(-n + 5) {
-  border-top: 1px solid #333;
+  border-top: 2px solid #333;
 }
 .number_board .numboard_list:nth-child(5n + 1) {
-  border-left: 1px solid #333;
-}
-.map_wrap #map {
-  width: 100%;
-  height: 500px;
-}
-.map_textlist span {
-  display: block;
-  min-width: 80px;
-}
-.form-control#map_addnum {
-  display: inline-block;
-  width: calc(100% - 108px);
-}
-.popup_address .form-control[readonly] {
-  background: #fff;
-}
-.about_content .about_text {
-  width: calc(65% - 30px);
-  margin-right: 30px;
-}
-.about_content .about_text .about_exp {
-  font-size: 20px;
-  line-height: 36px;
-}
-.about_content .about_text .about_exp p.sign {
-  margin-top: 50px;
-  text-align: left;
-}
-.about_content .about_img {
-  width: 35%;
-  min-width: 300px;
-}
-.about_content .about_img > img {
-  width: 100%;
-}
-.about_content .about_title {
-  font-size: 28px;
-  margin-top: 0;
+  border-left: 2px solid #333;
 }
 
 .footer {
@@ -1915,12 +1962,6 @@ input {
   }
 }
 @media (max-width: 1024px) {
-  .service .sub_banner.children .banner_title {
-    font-size: 9.7656vw;
-  }
-  .map_wrap #map {
-    height: 400px;
-  }
   .footer {
     padding: 60px 15px;
   }
@@ -1935,13 +1976,6 @@ input {
   }
   .nav > li.navbar-pc > a {
     font-size: 22px;
-  }
-  .about_content {
-    flex-wrap: wrap;
-  }
-  .about_content .about_text {
-    width: 100%;
-    margin: 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2012,8 +2046,11 @@ input {
     font-size: 36px;
   }
   .service .marketing {
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 80px;
+  }
+  .service .sub_banner.children .banner_title {
+    font-size: 36px;
   }
   .green_box {
     margin-bottom: 75px;
@@ -2023,9 +2060,6 @@ input {
     padding: 15px;
   }
   .green_box .green_wrap > h2 {
-    font-size: 30px;
-  }
-  .h2-normal {
     font-size: 30px;
   }
   .green_box .green_wrap > p {
@@ -2106,7 +2140,6 @@ input {
     top: 0;
     left: 0;
     width: 100%;
-    min-width: 320px;
     padding: 10px 30px;
     background: #f5f5f5;
   }
@@ -2117,9 +2150,6 @@ input {
   }
   .number_board .numboard_list {
     height: 30px;
-  }
-  .map_wrap #map {
-    height: 350px;
   }
 }
 @media (max-width: 767px) {
@@ -2135,13 +2165,6 @@ input {
   .main_header .navbar-right .dropdown-menu {
     left: 0;
     transform: translate(0);
-  }
-  .about_content .about_title {
-    font-size: 24px;
-  }
-  .about_content .about_text .about_exp {
-    font-size: 18px;
-    line-height: 30px;
   }
 }
 @media (max-width: 640px) {
@@ -2193,11 +2216,6 @@ input {
   }
   .network_img.w_40 {
     width: 60%;
-  }
-}
-@media (max-width: 320px) {
-  .service .sub_banner.children .banner_title {
-    font-size: 31px;
   }
 }
 /* 미디어쿼리 end */
