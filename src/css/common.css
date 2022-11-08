@@ -173,107 +173,137 @@ body {
   font-weight: 700;
   src: url(../fonts/notosans/NotoSansJP-Bold.woff2) format("woff2"), url(../fonts/notosans/NotoSansJP-Bold.woff) format("woff"), url(../fonts/notosans/NotoSansJP-Bold.otf) format("opentype");
 }
-
-
 .mb-0 {
   margin-bottom: 0 !important;
 }
+
 .mb-1 {
   margin-bottom: 10px !important;
 }
+
 .mb-2 {
   margin-bottom: 20px !important;
 }
+
 .mb-3 {
   margin-bottom: 30px !important;
 }
+
 .mb-4 {
   margin-bottom: 40px !important;
 }
+
 .mb-5 {
   margin-bottom: 50px !important;
 }
+
 .mt-1 {
   margin-top: 10px !important;
 }
+
 .mt-2 {
   margin-top: 20px !important;
 }
+
 .mt-3 {
   margin-top: 30px !important;
 }
+
 .mt-4 {
   margin-top: 40px !important;
 }
+
 .mt-5 {
   margin-top: 50px !important;
 }
+
 .btn {
   outline: none !important;
 }
+
 .col_white {
   color: #fff;
 }
+
 .col_green {
   color: #4bbd73;
 }
+
 .col_green_dark {
   color: #21610b;
 }
+
 .col_red {
   color: #ff6e63;
 }
+
 .col_blue {
   color: #6b7aff;
 }
+
 .w_30 {
   width: 30%;
 }
+
 .w_40 {
   width: 40%;
 }
+
 .w_50 {
   width: 50%;
 }
+
 .w_60 {
   width: 60%;
 }
+
 .w_70 {
   width: 70%;
 }
+
 .w_100 {
   width: 100%;
 }
+
 .float_left {
   float: left;
 }
+
 .float_right {
   float: right;
 }
+
 .float_left::after,
 .float_right::after {
   content: "";
   display: block;
   clear: both;
 }
+
 .text-light {
   font-size: 12px;
 }
+
 .text-normal {
   font-size: 16px;
 }
+
 .text-medium {
   font-size: 20px;
 }
+
 .text-large {
   font-size: 24px;
 }
+
 .text-xlarge {
   font-size: 36px;
 }
+
 .fw-bold {
   font-weight: bold;
 }
+
 .fw-normal {
   font-weight: normal;
 }
@@ -311,6 +341,7 @@ img {
 .a {
   display: inline;
 }
+
 .a div {
   display: block;
 }
