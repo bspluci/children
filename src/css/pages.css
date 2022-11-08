@@ -1,170 +1,36 @@
-.h2-normal {
-  border-left:10px solid #2c8d57;
-  padding-left:10px;
-  margin-bottom:30px;
-  font-family: 'Nanum Myeongjo', serif;
-}
-.h2-normal + p.text-large {
-  line-height: 42px;
-  color:#666;
-  padding-left:20px;
-}
-.text-vision {
-  font-family: 'East Sea Dokdo', cursive;
-  font-size: 80px;
-  color:#000
-}
-.service .eco_boxlist .eco_boxtext.title {
-  font-family: 'Nanum Myeongjo', serif;
-  text-indent: 0;
-  border-bottom:1px solid #999;
-  padding:0 0 10px 0;
-}
-.network_wrap li {
-  margin-bottom: 30px;
-  padding: 20px 25px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px 2px #ddd;
-  background-color: rgba(255 255 255/0.85);
-}
-.network_text {
-  padding-left:10px
-}
-.network_text.title {
-  font-family: 'Nanum Myeongjo', serif;
-  text-indent: 0;
-  border-bottom:1px solid #999;
-  padding:0 0 10px 0;
-  margin-bottom: 20px;
-}
-.support_letter {
-  font-family: 'East Sea Dokdo', cursive;
-  font-size: 48px;
-  text-align: center;
-  color:#000
-}
-.support_letter span {
-  word-break: keep-all;
-}
-.support_wrap {
-  padding-left: 20px;
-}
-.support_list {
-  list-style-type: disc;
-}
-h3.title {
-  font-family: 'Nanum Myeongjo', serif;
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-.support_account {
-  margin-bottom: 220px;
-  padding: 50px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px 2px #ddd;
-  background-color: rgba(255 255 255/0.9);
-  text-align: center;
-}
-.support_account span {
-  word-break: keep-all;
+::-webkit-input-placeholder {
+  color: gray;
 }
 
-.form_login {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px 2px #ddd;
-  background-color: rgba(255 255 255/0.9);
-}
-.form_login .form-wrap {
-  margin-top:20px;
-  margin-bottom: 20px;
+::-moz-placeholder {
+  color: gray;
 }
 
+:-ms-input-placeholder {
+  color: gray;
+}
 
-.bg_01 {
-  background: url(../images/bg_01.png) no-repeat right bottom;
-  background-size: 700px auto;
+::-ms-input-placeholder {
+  color: gray;
 }
-.bg_02 {
-  background: url(../images/bg_02.png) no-repeat right bottom;
-  background-size: 700px auto;
+
+::placeholder {
+  color: gray;
 }
-.bg_03 {
-  background: url(../images/bg_03.png) no-repeat right bottom;
-  background-size: 700px auto;
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 10rem;
 }
-.bg_04 {
-  background: url(../images/bg_04.png) no-repeat right bottom;
-  background-size: 900px auto;
+
+.a {
+  display: inline;
 }
-.bg_05 {
-  background: url(../images/bg_05.png) no-repeat right bottom;
-  background-size: 700px auto;
+.a div {
+  display: block;
 }
-.bg_06 {
-  background: url(../images/bg_06.png) no-repeat right bottom;
-  background-size: 700px auto;
-}
-.bg_07 {
-  background: url(../images/bg_07.png) no-repeat right bottom;
-  background-size: 700px auto;
-}
-.img-bottom-padding {
-  padding-bottom: 400px;
-}
-.welfare_img img {
-  width:70%;
-}
-@media (max-width: 768px) {
-  .h2-normal + p.text-large {
-    line-height: 32px;
-  }
-  .text-vision {
-    font-size: 50px;
-  }
-  .bg_01 {
-    background: url(../images/bg_01.png) no-repeat right bottom;
-    background-size: contain;
-  }
-  .bg_02 {
-    background: url(../images/bg_02.png) no-repeat right bottom;
-    background-size: contain;
-  }
-  .bg_03 {
-    background: url(../images/bg_03.png) no-repeat right bottom;
-    background-size: contain;
-  }
-  .bg_04 {
-    background: url(../images/bg_04.png) no-repeat right bottom;
-    background-size: contain;
-  }
-  .bg_05 {
-    background: url(../images/bg_05.png) no-repeat right bottom;
-    background-size: contain;
-  }
-  .bg_06 {
-    background: url(../images/bg_06.png) no-repeat right bottom;
-    background-size: contain;
-  }
-  .bg_07 {
-    background: url(../images/bg_07.png) no-repeat right bottom;
-    background-size: contain;
-  }
-  h3.title {
-    font-size: 25px;
-  }
-}
-@media (max-width: 512px) {
-  .img-bottom-padding {
-    padding-bottom: 300px;
-  }
-  .welfare_img img {
-    width:100%;
-  }
-  .support_account {
-    margin-bottom: 100px;
-  }
+
+.b {
+  border: solid 1px #ff0000;
 }
