@@ -186,6 +186,16 @@ h3.title {
   width: 70%;
 }
 
+.login_name {
+  font-family: "Gugi", cursive;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.login_name span {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 15px;
+}
+
 .organ_main_top {
   background: url(../images/main_back.jpg) no-repeat center 0;
   background-size: cover;
