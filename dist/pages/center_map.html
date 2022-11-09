@@ -212,77 +212,136 @@
       <div class="container"></div>
     </div>
     <div class="container">
-      <div class="sub_banner_pointmsg">
-        <h2><span>80점</span></h2>
-        <h3>훌륭합니다!</h3>
-      </div>
       <section class="section">
         <div class="row marketing">
-          <h3 class="marketing_title"><span>홍길동</span>님에게 필요한 학습자료</h3>
-          <div class="table_wrap table_common learning_need">
-            <table class="tbl_list">
-              <caption></caption>
-              <colgroup>
-                <col class="date" style="width: 15%" />
-                <col class="name" style="width: 15%" />
-                <col class="res" style="width: 15%" />
-                <col class="view" style="width: auto" />
-                <col class="view" style="width: 15%" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">학교급</th>
-                  <th scope="col">학년</th>
-                  <th scope="col">교과</th>
-                  <th scope="col">자료명</th>
-                  <th scope="col">파일</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>초등학교</td>
-                  <td>3학년</td>
-                  <td>수학</td>
-                  <td>수학 1주차</td>
-                  <td class="file-download">
-                    <a href="javascript:void(0);">
-                      <i class="bi bi-file-earmark-arrow-down"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>초등학교</td>
-                  <td>3학년</td>
-                  <td>수학</td>
-                  <td>수학 1주차</td>
-                  <td class="file-download">
-                    <a href="javascript:void(0);">
-                      <i class="bi bi-file-earmark-arrow-down"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>초등학교</td>
-                  <td>3학년</td>
-                  <td>수학</td>
-                  <td>수학 1주차</td>
-                  <td class="file-download">
-                    <a href="javascript:void(0);">
-                      <i class="bi bi-file-earmark-arrow-down"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="5" class="nodata">조회된 내용이 없습니다.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="text-center mt-3">
-            <a href="" class="form_login_btn btn btn-lg btn-default">결과보기</a>
-            <a href="" class="form_login_btn btn btn-lg btn-default">다시보기</a>
+          <div class="marketing_head">
+            <h3 class="marketing_title">오시는 길</h3>
           </div>
         </div>
+
+        <!-- 오시는길 등록 전/후 -->
+
+        <!-- 오시는길 등록 전 : start -->
+        <!-- <div class="row marketing">
+          <div class="text-center jumbo">
+            <a class="btn btn-lg btn-green mb-2" href="javascript:void(0);" onclick="showPopup('popup_address')"
+              >등록</a
+            >
+            <p class="text-large">오시는 길 등록전 입니다.</p>
+          </div>
+        </div> -->
+        <!-- 오시는길 등록 전 : end -->
+
+        <!-- 오시는길 등록 후 : start -->
+        <div class="row marketing">
+          <div class="map_wrap">
+            <div id="map"></div>
+            <!-- 카카오지도 사이트 도메인은 http://localhost:3002 입니다. -->
+            <script
+              type="text/javascript"
+              src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b75eafee98ec28bc7ecddfc833cb6c0"
+            ></script>
+            <script>
+              var container = document.getElementById("map");
+              var latitude = 37.485466809483064; // 위도
+              var hardness = 126.89817123335878; // 경도
+              var options = {
+                center: new kakao.maps.LatLng(latitude, hardness),
+                level: 3,
+              };
+
+              var map = new kakao.maps.Map(container, options);
+
+              // 마커가 표시될 위치입니다
+              var markerPosition = new kakao.maps.LatLng(latitude, hardness);
+              var marker = new kakao.maps.Marker({
+                position: markerPosition,
+              });
+              marker.setMap(map);
+            </script>
+
+            <div class="map_text mt-3">
+              <ul class="map_textwrap">
+                <li class="map_textlist text-medium flex_wrap mb-1">
+                  <span class="fw-bold">주소</span>서울 구로구 구로3동 대륭포스트타워3차
+                </li>
+                <li class="map_textlist text-medium flex_wrap mb-1">
+                  <span class="fw-bold">지하철</span>대림역 2호선 4번출구로 내리셔서 구로4동 주민센터 방향 도보 10분
+                </li>
+                <li class="map_textlist text-medium flex_wrap mb-1">
+                  <span class="fw-bold">버스</span>구로중학교 : 654, 6511, 6613, 구로09, 구로13번
+                </li>
+              </ul>
+              <div class="text-center mt-3">
+                <a
+                  href="javascript:void(0)"
+                  class="form_login_btn btn btn-lg btn-default"
+                  onclick="showPopup('popup_address')"
+                  >수정</a
+                >
+                <button class="form_login_btn btn btn-lg btn-default">삭제</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 오시는길 등록 후 : end -->
+
+        <!-- 주소등록 팝업 : start -->
+        <div class="popup popup_address popup_edit">
+          <div class="dim"></div>
+          <div class="popup_area text-left">
+            <div class="popup_close" onclick="closePopup('popup_address')">
+              <i class="bi bi-x-lg"></i>
+            </div>
+            <h3 class="popup_title">오시는 길 등록 하기</h3>
+            <form action="" method="" class="form_my_reg">
+              <div class="form-wrap">
+                <div class="form-group flex_wrap just_between">
+                  <label for="map_address" class="form-label require">주소</label>
+                  <div class="add-group">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="map_addnum" readonly />
+                      <label for="for_addnum" class="btn btn-default" onclick="alert('우편번호 검색 서비스')"
+                        >우편번호 검색</label
+                      >
+                    </div>
+                    <input
+                      type="text"
+                      id="map_address"
+                      name="map_address"
+                      class="form-control"
+                      value=""
+                      readonly
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group flex_wrap just_between">
+                  <label for="map_detailadd" class="form-label require">상세주소</label>
+                  <input type="text" name="map_detailadd" class="form-control" value="" required />
+                </div>
+                <div class="form-group flex_wrap just_between">
+                  <label for="map_subway" class="form-label">지하철</label>
+                  <input type="password" id="map_subway" name="map_subway" class="form-control" value="" />
+                </div>
+                <div class="form-group flex_wrap just_between">
+                  <label for="map_bus" class="form-label">버스</label>
+                  <input type="password" id="map_bus" name="map_bus" class="form-control" value="" />
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="form_register_btn btn btn-xm btn-default">등록</button>
+                <a
+                  href="javascript:void(0)"
+                  class="form_register_btn btn btn-xm btn-default"
+                  onclick="closePopup('popup_address')"
+                  >취소</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- 주소등록 팝업 : end -->
       </section>
     </div>
     <footer class="footer">
