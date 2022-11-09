@@ -47,9 +47,20 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px">
       <ul class="nav navbar-nav navbar-right">
-        <li class="navbar-list">
-          <a class="nav-link" href="javascript:void(0);">소개</a>
+        <li class="navbar-list nav-item dropdown" role="presentation">
+          <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            >소개<i class="bi bi-chevron-down"></i
+          ></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li>
+              <a class="dropdown-item" href="../pages/center_about.html">센터 소개</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/center_map.html">오시는 길</a>
+            </li>
+          </ul>
         </li>
+
         <li class="navbar-list dropdown">
           <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             >학습하기<i class="bi bi-chevron-down"></i
@@ -63,9 +74,11 @@
             </li>
           </ul>
         </li>
+
         <li class="navbar-list">
           <a class="nav-link" href="../pages/center_program.html">프로그램</a>
         </li>
+
         <li class="navbar-list nav-item dropdown" role="presentation">
           <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             >우리소식<i class="bi bi-chevron-down"></i
@@ -79,6 +92,7 @@
             </li>
           </ul>
         </li>
+
         <li class="navbar-list dropdown">
           <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             >후원/공시<i class="bi bi-chevron-down"></i
@@ -93,6 +107,8 @@
           </ul>
         </li>
 
+        <!-- 로그인 전/후 -->
+
         <!-- 로그인 전 start -->
         <!-- <li class="navbar-list">
           <a class="nav-link" href="../pages/center_login.html">로그인</a>
@@ -106,7 +122,7 @@
           ></a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
             <li>
-              <a class="dropdown-item" href="javascript:void(0);" onclick="showPopup('popup_my_edit')">정보수정</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="showPopup('popup_my')">정보수정</a>
             </li>
             <li>
               <a class="dropdown-item" href="javascript:void(0);">LOGOUT</a>
@@ -115,17 +131,17 @@
         </li>
 
         <li class="navbar-list nav-item dropdown navbar-mo flex_wrap" role="presentation">
-          <a class="nav-link" href="javascript:void(0);" onclick="showPopup('popup_my_edit')">정보수정</a>
+          <a class="nav-link" href="javascript:void(0);" onclick="showPopup('popup_my')">정보수정</a>
           <a class="dropdown-item" href="javascript:void(0);">LOGOUT</a>
         </li>
         <!-- 로그인 후 end -->
       </ul>
     </div>
     <!-- 정보수정 팝업 : start -->
-    <div class="popup popup_my_edit">
+    <div class="popup popup_my popup_edit">
       <div class="dim"></div>
       <div class="popup_area text-left">
-        <div class="popup_close" onclick="closePopup('popup_my_edit')">
+        <div class="popup_close" onclick="closePopup('popup_my')">
           <i class="bi bi-x-lg"></i>
         </div>
         <h3 class="popup_title">정보수정</h3>
@@ -157,7 +173,7 @@
             <a
               href="javascript:void(0)"
               class="form_register_btn btn btn-xm btn-default"
-              onclick="closePopup('popup_my_edit')"
+              onclick="closePopup('popup_my')"
               >취소</a
             >
           </div>
